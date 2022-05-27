@@ -1,0 +1,41 @@
+<div class="container mt-2 ">
+
+  <ng-container *ngIf="customers|async as listCustomers;else failureOrLoading">
+    <div class="card" *ngIf="customers">
+
+      <div class="card-header">Customers List</div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="text-center">
+          <tr >
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+          </thead>
+          <tbody class="text-center">
+
+          <tr *ngFor="let c of customers | async  " >
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.email}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #failureOrLoading>
+    <ng-container *ngIf="errorMessage ;else loading">
+      <span class="text-danger">{{errorMessage}}</span>
+    </ng-container>
+
+    <ng-template #loading>
+      Loading.....
+    </ng-template>
+  </ng-template>
+
+
+
+</div>
