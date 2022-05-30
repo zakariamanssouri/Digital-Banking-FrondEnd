@@ -1,0 +1,10 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+mat-nav-list a {
+    color: white;
+    margin-top: -5px;
+  }
+
+ 

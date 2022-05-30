@@ -1,5 +1,5 @@
-<div class="container mt-2">
-  <ng-container
+<div class="container mt-2" >
+  <ng-container class="shadow-card "
     *ngIf="customers | async as listCustomers; else failureOrLoading"
   >
     <div class="card" *ngIf="customers">
@@ -46,8 +46,11 @@
               <td>{{ c.name }}</td>
               <td>{{ c.email }}</td>
               <td>
-                <button (click)="handleDeleteCustomer(c)" class="btn btn-danger">
-                  <i class="bi bi-trash"></i>
+                <button 
+                mat-mini-fab color="warn"
+                 aria-label="Example icon button with a menu icon"
+                 (click)="handleDeleteCustomer(c)">
+                  <mat-icon>delete</mat-icon>
                 </button>
               </td>
             </tr>
