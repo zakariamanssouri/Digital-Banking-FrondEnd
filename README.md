@@ -1,3 +1,8 @@
+![frontend](https://user-images.githubusercontent.com/80859231/171069971-c3023d51-16fc-4427-9e00-c6bfa61e3dce.gif)
+
+
+
+
 # BackEnd
 link for backend part [Digital-banking-backend](https://github.com/zakariamanssouri/Digital-Banking-Backend)
 
